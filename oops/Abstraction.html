@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction in Java</title>
+</head>
+<body>
+    <section>
+        <h1>Abstraction in Java</h1>
+        <p>Abstraction is a fundamental concept in object-oriented programming that focuses on exposing only the essential features of an object while hiding the unnecessary details. In Java, abstraction is achieved through abstract classes and interfaces.</p>
+    </section>
+
+    <section>
+        <h2>What is Abstraction?</h2>
+        <p>Hiding Internal Implementation & Just Highlighting The Set of Services What We Offering is The Concept of Abstraction.</p>
+        <p>
+            <h4>Example :</h4>
+            <br>Through ATM Machine We Can Able to Withdraw Money, Deposit Money, Check Balance Information, But We Don't Know How ATM Machine Works Internally.
+        </p>
+    </section>
+
+    <section>
+        <h2>How To Achieve Abstraction?</h2>
+        <p>We Can Achieve Abstraction By Using Abstract Classes & Interfaces.</p>
+        <h4>Example:</h4>
+        <pre>
+            abstract class Shape {
+                abstract void draw();
+            }
+
+            class Circle extends Shape {
+                void draw() {
+                    System.out.println("Drawing Circle");
+                }
+            }
+
+            class Rectangle extends Shape {
+                void draw() {
+                    System.out.println("Drawing Rectangle");
+                }
+            }
+        </pre>
+    </section>
+
+    <section>
+        <h2>Advantages of Abstraction</h2>
+        <ul>
+            <li>Security: We are Not Highlighting our internal Implementation.</li>
+            <li>Maintainability: Changes in the implementation do not affect the users of the abstraction.</li>
+            <li>Flexibility: Different implementations can be provided for the same interface.</li>
+        </ul>
+        <p><strong>Note:</strong><em>It is Highly Recommended to Use Abstraction to Simplify Complex Systems.</em></p>
+    </section>
+
+</body>
+</html>
