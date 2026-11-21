@@ -1,1 +1,61 @@
- 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+ </head>
+ <body>
+    <section>
+        <h1>Encapsulation in Object-Oriented Programming</h1>
+        <p>Encapsulation is a fundamental concept in object-oriented programming (OOP) that refers to the bundling of data and methods that operate on that data within a single unit, typically a class. It restricts direct access to some of an object's components, which can prevent the accidental modification of data.</p>
+        </section>
+
+    <section>
+        <h2>What is Encapsulation?</h2>
+        <p>The Process of Binding Data & Corresponding Methods into a Single Unit.</p>
+       
+        <h4>Example:</h4>
+        <p>Every class in Java is an example of encapsulation.</p>
+        <br>
+        <p>If any component follows data hiding & Abstraction Such Components are Said to be Encapsulated.</p>
+        <P><strong>Encapsulation = Data Hiding + Abstraction</strong></P>
+    </section>   
+    
+    <section>
+        <h2>Benefits of Encapsulation</h2>
+        <ul>
+            <li>Improved code maintainability</li>
+            <li>Increased security of data</li>
+            <li>Enhanced flexibility and scalability</li>
+            <li>Facilitates easier debugging and testing</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Disadvantages of Encapsulation</h2>
+        <p> The main Disadvantage is, It increases Length of the code & slows down the performance.</p>
+    </section>
+
+    <section>
+        <h2>Tightly Encapsulated Classes</h2>
+        <p>A class is Said to be <strong>Tightly Encapsulated</strong> if all its data members are declared private and whether the class contains correspondong getter & setter methods or not & whether this methods declared as public or not, these thinks we are not required to check.</p>
+        <h4>Example:</h4>
+        <pre>
+            public class Account {
+                private double balance;
+
+                public double getbalance() {
+                    return balance;
+                }
+
+            }
+            
+        </pre>
+    </section>
+
+    <section>
+        <p><strong>Note:</strong>If The Parent class is not <strong>Tightly Encapsulated</strong>, then the child class cannot be tightly encapsulated either.</p>
+    </section>
+ </body>
+ </html>
