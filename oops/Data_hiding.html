@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Hiding in Java</title>
+</head>
+<body>
+    <section>
+        <h1>Data Hiding in Java</h1>
+        <p>Data hiding is a fundamental concept in object-oriented programming that refers to the practice of restricting direct access to the internal details of an object. In Java, this is achieved through the use of access modifiers like private, protected, and public.</p>
+    </section>
+
+
+    <section>
+        <h2>What is Data hiding?</h2>
+        <p>Outside person can't access our internal details directly Or Our Data Should not go outside directly this wanderful OOPs feature is nothing but data hiding.</p>
+        
+        <p>After Proper Authentication outside person should access our internal data.</p>
+       <br>
+        <p>
+            <h4>Example :</h4> 
+            <br>1.After Providing Correct Username And Password We Can Able to Access out Gmail Inbox Information.
+        </p>
+            
+            <p>2.Even though we are valid customer of the bank, We can access our Account Information & we can't access some others Account Details.
+
+            </p>
+    </section>
+    
+    <section>
+        <h2>How To Achieve Data Hiding?</h2>
+        <p>We Can Achieve Data Hiding By Declaring Data Members(Variables) As private.</p>
+        <h4>Example:</h4>
+        <pre>
+            public class Account
+            {
+                private double balance;
+                private String name;
+                
+                public double getBalanceInfo()
+                {
+                    //Here we have to validate.
+                    
+                    return balance;
+                }
+            }
+        </pre>
+    </section>
+
+    <section>
+        <h2>Advantages of Data Hiding</h2>
+        <ul>
+            <li>Security: Sensitive data is protected from unauthorized access.</li>
+            <li>Control: Provides control over how data is accessed and modified.</li>
+        </ul>
+        <p><Strong>Note:</Strong><em>It is Highly Recommanded to Declare Data Members as private.</em></p>
+    </section>
+
+
+</body>
+</html>
