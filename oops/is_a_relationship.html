@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance In Java</title>
+</head>
+<body>
+    <section>
+        <h1>Inheritance In Java</h1>
+        <p>Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class to inherit properties and behaviors (methods) from another class. In Java, inheritance is implemented using the "extends" keyword.</p>
+        <pre>
+
+            class ParentClass {
+                // Parent class members
+            }
+            class ChildClass extends ParentClass {
+                // Child class members
+            }
+
+        </pre>
+    </section>
+    <section>
+        <h2>What is Inheritance?</h2>
+        <p>Inheritance is a mechanism in which one class acquires the properties (fields) and behaviors (methods) of another class. The class that inherits is called the subclass (or derived class), and the class being inherited from is called the superclass (or base class).</p>
+    </section>
+
+    <section>
+        <h2>Benefits of Inheritance</h2>
+        <ul>
+            <li>Code Reusability: Inheritance allows for the reuse of existing code, reducing redundancy.</li>
+            <li>Improved Maintainability: Changes made to the superclass can automatically propagate to subclasses, making maintenance easier.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Types of Inheritance</h2>
+        <p>Java supports several types of inheritance:</p>
+        <ul>
+            <li><strong>Single Inheritance:</strong> A class inherits from only one superclass.</li>
+            <li><strong>Multi-level Inheritance:</strong> A class inherits from a subclass, which in turn inherits from another class.</li>
+            <li><strong>Hierarchical Inheritance:</strong> Multiple classes inherit from a single superclass.</li>
+        </ul>
+        <p>Java won't provide support for several types of inheritance:</p>
+        <ul>
+            <li><strong>Cyclic Inheritance:</strong> A situation where a class inherits from another class, which in turn inherits from the first class. (Not Supported in Java)</li>
+            <li><strong>Multiple Inheritance:</strong> A class inherits from more than one superclass. (Not Supported in Java)</li>
+            <li><strong>Hybrid Inheritance:</strong> A combination of two or more types of inheritance. (Not Supported in Java)</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Example of Inheritance</h2>
+        <pre>
+            class Parent {
+               public void newMethod() {
+                    System.out.println("Parent class method method.");
+                }
+            }
+
+            class Child extends Parent {
+                
+                public void childMethod() {
+                    System.out.println("Child class method.");
+                }
+            }
+
+            public class Main {
+                public static void main(String[] args) {
+                    Parent par1 = new Parent();
+                    par1.newMethod();
+                    par1.childMethod(); // This will cause a compile-time error because childMethod() is not defined in Parent class.
+
+                    Child ch1 = new Child();
+                    ch1.newMethod(); // This will work because Child class inherits newMethod() from Parent
+                    ch1.childMethod(); // This will work because it's a method of the Child class
+
+                    Parent par2 = new Child(); // This is allowed because Child is a subclass of Parent
+                    par2.newMethod(); // This will work because Child class inherits newMethod() from Parent
+                    par2.childMethod(); // This will cause a compile-time error because childMethod() is not defined in Parent class.
+
+                    Child ch2 = new Parent(); // This will cause a compile-time error because Parent is not a subclass of Child
+                }
+            }
+        </pre>
+
+        <h4>Conclusions:</h4>
+        <ul>
+            <li>Whatever Methods Parent has by default available to the Child class & hance on the Child reference we can call both Parent & Child methods.</li>
+            <li>Whatever methods Child has by default not available to the Parent & hance on the Parent reference we can't call Child specifiv methods.</li>
+            <li>Parent reference can be used to hold Child Object, But by using that Parent reference we can't call Child specific methods, but we can call Parent Specific methods.</li>
+            <li>Parent reference can be used to hold Child object, But Child reference can't be used to hold Parent class objet.</li>
+        </ul>
+        <h5>Note:</h5>
+        <p>The most common methods which are applicable for any type of Child, we have to define in parent class.</p>
+        <p><strong>Example:</strong>object class act as root(base) class for all classes in Java.</p>
+    </section>
+</body>
+</html>
